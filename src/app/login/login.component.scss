@@ -1,0 +1,26 @@
+.align-card-login {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    padding: 10px;
+    left: 37%;
+}
+
+:host ::ng-deep .p-card-title {
+    color: #0e62b5d4;
+}
+
+:host ::ng-deep .p-button {
+    background: #0e62b5d4;
+    border: 1px solid #0e62b5d4;
+    // width: 100%;
+    padding-top: 10px;
+
+}
+
+:host ::ng-deep .p-button:enabled:hover {
+    background: #0e62b5d4;
+    color: #ffffff;
+    border-color: #0e62b5d4;
+}
