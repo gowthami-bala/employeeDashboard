@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatSliderModule } from '@angular/material/slider';
@@ -14,11 +14,13 @@ import {CardModule} from 'primeng/card';
 import {MatCardModule} from '@angular/material/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {MatRadioModule} from '@angular/material/radio';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     MatSliderModule,
     MatButtonModule,
     BrowserAnimationsModule,
@@ -27,7 +29,8 @@ import {MatRadioModule} from '@angular/material/radio';
     CardModule,
     MatCardModule,
     InputTextModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
