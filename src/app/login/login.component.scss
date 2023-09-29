@@ -2,25 +2,28 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 20%;
-    padding: 10px;
-    left: 37%;
+    // top: 20%;
+    padding: 210px;
+    // left: 37%;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/connection.jpg");
+    background-size: cover;
+    margin: -8px;
 }
 
 :host ::ng-deep .p-card-title {
-    color: #0e62b5d4;
+    color: #7637db;
 }
 
-:host ::ng-deep .p-button {
-    background: #0e62b5d4;
-    border: 1px solid #0e62b5d4;
-    // width: 100%;
-    padding-top: 10px;
-
+:host ::ng-deep .login .p-button {
+    background: #7637db;
+    border: 1px solid #7637db;
+    width: 100%;
 }
 
-:host ::ng-deep .p-button:enabled:hover {
-    background: #0e62b5d4;
+:host ::ng-deep .login .p-button:enabled:hover {
+    background: #7637db;
     color: #ffffff;
-    border-color: #0e62b5d4;
+    border-color: #7637db;
 }

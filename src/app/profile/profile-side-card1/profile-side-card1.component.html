@@ -1,0 +1,83 @@
+<div>
+    <div class="grid">
+        <div class="col-4">
+            <p-card>
+                <div class="parent" tabindex="0">
+                    <div class="one" tabindex="1">
+                        <div class="grid desc" (click)="profileNav($event)" >
+                            <div class="col-2" style="text-align: center;" >
+                                <i class="pi pi-user"></i>
+                            </div>
+                            <div class="col-10"  >
+                                <label >Personal</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two" tabindex="2">
+                        <div class="grid desc" (click)="profileNav($event)">
+                            <div class="col-2" style="text-align: center;">
+                                <i class="pi pi-briefcase"></i>
+                            </div>
+                            <div class="col-10" >
+                                <label>Work</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="three" tabindex="3">
+                        <div class="grid desc" (click)="profileNav($event)">
+                            <div class="col-2" style="text-align: center;">
+                                <i class="pi pi-id-card"></i>
+                            </div>
+                            <div class="col-10">
+                                <label>Identity</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four" tabindex="4">
+                        <div class="grid desc" (click)="profileNav($event)">
+                            <div class="col-2" style="text-align: center;">
+                                <i class="pi pi-phone"></i>
+                            </div>
+                            <div class="col-10">
+                                <label>Contact</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five" tabindex="5">
+                        <div class="grid desc" (click)="profileNav($event)">
+                            <div class="col-2" style="text-align: center;">
+                                <i class="pi pi-book"></i>
+                            </div>
+                            <div class="col-10">
+                                <label>Education</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five" tabindex="5">
+                        <div class="grid desc" (click)="profileNav($event)">
+                            <div class="col-2" style="text-align: center;">
+                                <i class="pi pi-circle-fill"></i>
+                            </div>
+                            <div class="col-10">
+                                <label>Skills</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="five" tabindex="5">
+                        <div class="grid desc" (click)="profileNav($event)">
+                            <div class="col-2" style="text-align: center;">
+                                <i class="pi pi-globe"></i>
+                            </div>
+                            <div class="col-10">
+                                <label>Social</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p-card>
+        </div>
+        <div class="col-8">
+            <app-profile [hidden]="viewBasicProfile"></app-profile>
+        </div>
+    </div>
+</div>

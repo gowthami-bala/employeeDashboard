@@ -1,0 +1,16 @@
+<p-menubar>
+    <ng-template pTemplate="start">
+        <i class="pi pi-align-justify" style="color: #fff;" (click)="updateNav()"></i> &nbsp;&nbsp;&nbsp;
+        <i class="pi pi-search" style="color: #fff;" (click)="search()"></i>&nbsp;&nbsp;&nbsp;
+        <input [hidden]="searchIcon" type="text" pInputText placeholder="Search">
+    </ng-template>
+
+    <ng-template pTemplate="end">
+        <p-avatar label="{{loginUser}}" styleClass="mr-2" size="large" [matMenuTriggerFor]="menu"
+            [style]="{'background-color':'#9c27b0', 'color': '#ffffff'}" shape="circle"> </p-avatar>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="viewProfile()">Profile</button>
+            <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+    </ng-template>
+</p-menubar>

@@ -2,13 +2,20 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 20%;
-    padding: 10px;
-    left: 30%;
+    // top: 20%;
+    padding: 150px;
+    // left: 30%;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../assets/connection.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -8px;
 }
 
-:host ::ng-deep .p-card-title{
-    color: #0e62b5d4;
+:host ::ng-deep .p-card-title {
+    color: #7637db;
 }
 
 .mat-radio-button {
@@ -24,21 +31,21 @@ label {
 }
 
 :host ::ng-deep .p-button {
-    background: #0e62b5d4;
-    border: 1px solid #0e62b5d4;
+    background: #7637db;
+    border: 1px solid #7637db;
     width: 100%;
 }
 
 :host ::ng-deep .p-button:enabled:hover {
-    background: #0e62b5d4;
+    background: #7637db;
     color: #ffffff;
-    border-color: #0e62b5d4;
+    border-color: #7637db;
 }
 
 :host ::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #0e62b5d4;
+    border-color: #7637db;
 }
 
-:host ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle{
-    background-color: #0e62b5d4;
+:host ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #7637db;
 }

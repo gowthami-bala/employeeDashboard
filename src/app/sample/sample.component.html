@@ -1,0 +1,25 @@
+<div>
+    <div class="grid" >
+        <div class="col-4 scrollable-part" >
+            <!-- <p-card  > -->
+                <div *ngFor="let item of data" >
+                    <!-- <div> -->
+                    <!-- <p (click)="profileNav()">Basic information</p> -->
+                    <div class="grid" > 
+                        <div class="col-8">
+                            {{item.id}} .The First blog of the application
+                        </div>
+                        <div class="col-4" >
+                            <!-- <p-image src="{{item.image}}" alt="Image"  width="100"></p-image> -->
+                            <img src="{{item.image}}" alt="Image" width="100">
+                        </div>
+                    </div>
+                    
+                </div>
+            <!-- </p-card> -->
+        </div>
+        <div class="col-8 static-part"> 
+            <app-profile ></app-profile>
+        </div>
+        </div>
+        </div>

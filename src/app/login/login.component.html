@@ -1,22 +1,30 @@
 <!-- <p>register works!</p> -->
 <div class="align-card-login">
     <p-card header="Login" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
-        <div class="grid">
-            <div class="col-12 p-fluid">
-                <!-- <span class="p-float-label"> -->
+        <form [formGroup]="myLogin">
+            <div class="grid">
+                <div class="col-12 p-fluid">
+                    <!-- <span class="p-float-label"> -->
                     <label for="float-input">Username</label>
-                    <input id="float-input" type="text" pInputText >
-                <!-- </span> -->
+                    <input id="float-input" type="text" pInputText formControlName="username">
+                    <!-- </span> -->
+                </div>
+                <div class="col-12 p-fluid">
+                    <!-- <span class="p-float-label"> -->
+                    <label for="float-input">Password</label>
+                    <input id="float-input" type="password" pInputText formControlName="password">
+                    <!-- </span> -->
+                </div>
+                <div class="col-12" style="text-align: center;padding-top: 20px;padding-bottom: 0px; ">
+                    <p-button class="login" label="Login" (click)="onSubmit()"></p-button>
+                </div>
             </div>
-            <div class="col-12 p-fluid">
-                <!-- <span class="p-float-label"> -->
-                    <label for="float-input" >Password</label>
-                    <input id="float-input" type="text" pInputText >
-                <!-- </span> -->
-            </div>
-            <div class="col-12" style="text-align: center;padding-top: 20px;padding-bottom: 0px; ">
-                <p-button label="Login"></p-button>
-            </div>
+        </form>
+        <div style="text-align: center;">
+            <p>Not a memeber?
+                <a routerLink="/register">Signup Now</a>
+            </p>
         </div>
+
     </p-card>
 </div>

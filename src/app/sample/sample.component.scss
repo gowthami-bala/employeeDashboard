@@ -1,0 +1,13 @@
+
+.scrollable-part {
+    height: 775px; /* Set a fixed height for the scrollable part */
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  
+  .static-part {
+    height: 100%; /* Make it take up the remaining vertical space */
+    
+  }
+  .scrollable-part::-webkit-scrollbar {
+    display: none;
+  }

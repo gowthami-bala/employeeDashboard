@@ -1,0 +1,18 @@
+.parent [tabindex] {
+    transition:999s;
+    background: rgba(255,255,255,0);
+  }
+  .parent:focus-within [tabindex] {
+    transition:0s;
+    background: rgba(255,255,254,0); /* a little different coloration to make sure we trigger the transition */
+  }
+  .parent [tabindex]:focus,
+  .parent [tabindex].active:focus{ 
+    background-color:  #00aae7;
+    transition:0s;
+  }
+  
+  .parent .active{ 
+    background-color:  #00aae7; /* a little different coloration to make sure we trigger the transition */
+    color: #fff;
+  }

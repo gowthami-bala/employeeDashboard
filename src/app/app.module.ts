@@ -15,8 +15,23 @@ import {MatCardModule} from '@angular/material/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {MenubarModule} from 'primeng/menubar';
+import { HeaderComponent } from './header/header.component';
+import {AvatarModule} from 'primeng/avatar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {SidebarModule} from 'primeng/sidebar';
+import {MatMenuModule} from '@angular/material/menu';
+import { ProfileComponent } from './profile/profile/profile.component';
+import { ProfileSideCard1Component } from './profile/profile-side-card1/profile-side-card1.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import {ImageModule} from 'primeng/image';
+import { SampleComponent } from './sample/sample.component';
+import { RoughComponent } from './rough/rough.component';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, HeaderComponent, ProfileComponent, ProfileSideCard1Component, SidenavComponent, SampleComponent, RoughComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -30,7 +45,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     InputTextModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MessageModule,
+    MessagesModule,
+    MenubarModule,
+    AvatarModule,
+    MatSidenavModule,
+    SidebarModule,
+    MatMenuModule,
+    ImageModule,MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
