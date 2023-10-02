@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileSideCard1Component implements OnInit {
   data: any;
   viewBasicProfile :boolean = true;
+  editProfile :boolean = true; 
   constructor() { }
 
   ngOnInit(): void {
@@ -30,10 +31,18 @@ export class ProfileSideCard1Component implements OnInit {
       { id: "15", image: "../../assets/connection.jpg" },
     ]
   }
-  profileNav(data:any){
-    console.log(data);
-    
+  profileNav(){
     this.viewBasicProfile = false
+    
+  }
+
+  profileEdit(data:any){
+    console.log("hi");
+    
+    console.log(data);
+    if(data === "edit"){
+      this.editProfile = false
+    }
   }
 
 }

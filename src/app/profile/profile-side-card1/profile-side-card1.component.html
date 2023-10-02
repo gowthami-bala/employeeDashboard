@@ -4,7 +4,7 @@
             <p-card>
                 <div class="parent" tabindex="0">
                     <div class="one" tabindex="1">
-                        <div class="grid desc" (click)="profileNav($event)" >
+                        <div class="grid desc" (click)="profileNav()" >
                             <div class="col-2" style="text-align: center;" >
                                 <i class="pi pi-user"></i>
                             </div>
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="two" tabindex="2">
-                        <div class="grid desc" (click)="profileNav($event)">
+                        <div class="grid desc" (click)="profileNav()">
                             <div class="col-2" style="text-align: center;">
                                 <i class="pi pi-briefcase"></i>
                             </div>
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="three" tabindex="3">
-                        <div class="grid desc" (click)="profileNav($event)">
+                        <div class="grid desc" (click)="profileNav()">
                             <div class="col-2" style="text-align: center;">
                                 <i class="pi pi-id-card"></i>
                             </div>
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="four" tabindex="4">
-                        <div class="grid desc" (click)="profileNav($event)">
+                        <div class="grid desc" (click)="profileNav()">
                             <div class="col-2" style="text-align: center;">
                                 <i class="pi pi-phone"></i>
                             </div>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="five" tabindex="5">
-                        <div class="grid desc" (click)="profileNav($event)">
+                        <div class="grid desc" (click)="profileNav()">
                             <div class="col-2" style="text-align: center;">
                                 <i class="pi pi-book"></i>
                             </div>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="five" tabindex="5">
-                        <div class="grid desc" (click)="profileNav($event)">
+                        <div class="grid desc" (click)="profileNav()">
                             <div class="col-2" style="text-align: center;">
                                 <i class="pi pi-circle-fill"></i>
                             </div>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="five" tabindex="5">
-                        <div class="grid desc" (click)="profileNav($event)">
+                        <div class="grid desc" (click)="profileNav()">
                             <div class="col-2" style="text-align: center;">
                                 <i class="pi pi-globe"></i>
                             </div>
@@ -77,7 +77,8 @@
             </p-card>
         </div>
         <div class="col-8">
-            <app-profile [hidden]="viewBasicProfile"></app-profile>
+            <app-personal [hidden]="viewBasicProfile" (editPersonal)="profileEdit($event)" ></app-personal><br>
+            <app-profile [hidden]="editProfile"></app-profile>
         </div>
     </div>
 </div>

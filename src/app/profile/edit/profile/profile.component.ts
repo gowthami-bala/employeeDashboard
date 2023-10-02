@@ -13,13 +13,12 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
 
     this.profile = this.fb.group({
-      fullname: ['', [Validators.required]],
+      firstname: ['', [Validators.required]],
+      lastname:['',[Validators.required]],
       username: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       phonenumber: ['', [Validators.required]],
       password: ['', [Validators.required,Validators.minLength(8)]],
-      confirmpassword: ['', [Validators.required]],
-      gender: ['', [Validators.required]]
     });
 
   }

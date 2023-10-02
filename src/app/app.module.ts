@@ -23,15 +23,18 @@ import {AvatarModule} from 'primeng/avatar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {SidebarModule} from 'primeng/sidebar';
 import {MatMenuModule} from '@angular/material/menu';
-import { ProfileComponent } from './profile/profile/profile.component';
+import { ProfileComponent } from './profile/edit/profile/profile.component';
 import { ProfileSideCard1Component } from './profile/profile-side-card1/profile-side-card1.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import {ImageModule} from 'primeng/image';
 import { SampleComponent } from './sample/sample.component';
 import { RoughComponent } from './rough/rough.component';
-import {MatIconModule} from '@angular/material/icon';
+import {DividerModule} from 'primeng/divider';
+import { PersonalComponent } from './profile/personal/personal.component';
+import { WorkComponent } from './profile/work/work.component';
+import { SocialComponent } from './profile/social/social.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, HeaderComponent, ProfileComponent, ProfileSideCard1Component, SidenavComponent, SampleComponent, RoughComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, HeaderComponent, ProfileComponent, ProfileSideCard1Component, SidenavComponent, SampleComponent, RoughComponent, PersonalComponent, WorkComponent, SocialComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -53,7 +56,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSidenavModule,
     SidebarModule,
     MatMenuModule,
-    ImageModule,MatIconModule
+    ImageModule,
+    DividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

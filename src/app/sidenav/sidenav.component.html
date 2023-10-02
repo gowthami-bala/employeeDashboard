@@ -4,11 +4,12 @@
         <mat-sidenav *ngIf="shouldRun == true" mode="side" opened style="background-color: #7637db;color: #fff;width: 11%;">Sidenav
             content</mat-sidenav>
         <mat-sidenav-content>
-            <app-header (valueChange)="showHide($event)"></app-header>
-            <div style="margin: 10px;">
-                <app-profile-side-card1 (valueChange)="showHide($event)"></app-profile-side-card1>
-            </div>
             
+            <app-header (valueChange)="showHide($event)"></app-header>
+            <app-social></app-social>
+            <div style="margin: 10px;">
+                <app-profile-side-card1 (valueChange)="showHide($event)" [hidden]="viewDetails"></app-profile-side-card1>
+            </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

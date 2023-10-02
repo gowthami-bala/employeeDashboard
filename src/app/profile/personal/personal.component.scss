@@ -1,0 +1,13 @@
+// .card{
+//     margin-top: -40px;
+// }
+
+:host ::ng-deep .p-card .p-card-content {
+    margin-top:-30px
+}
+
+.editicon{
+    justify-content: flex-end;
+    display: flex;
+    margin-top: -40px;
+}

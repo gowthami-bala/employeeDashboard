@@ -18,7 +18,7 @@ export class SidenavComponent implements OnInit {
   }
 
   showHide(data: any) {
-    // console.log(data);
+    console.log(data);
     
     if (data === true) {
       this.shouldRun = !this.shouldRun
