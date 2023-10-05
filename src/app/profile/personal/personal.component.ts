@@ -13,7 +13,6 @@ export class PersonalComponent implements OnInit {
   ngOnInit(): void {
   }
   onEdit() {
-    console.log("hello");
     this.editPersonal.emit("edit");
   }
 }

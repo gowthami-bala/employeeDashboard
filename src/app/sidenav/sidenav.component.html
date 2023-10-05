@@ -1,14 +1,57 @@
 <!-- <p>sidenav works!</p> -->
 <div style="margin: -8px;">
-    <mat-sidenav-container class="example-container" >
-        <mat-sidenav *ngIf="shouldRun == true" mode="side" opened style="background-color: #7637db;color: #fff;width: 11%;">Sidenav
-            content</mat-sidenav>
-        <mat-sidenav-content>
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav *ngIf="shouldRun == true" mode="side" opened
+            style="background-color: #1d65a5;;color: #fff;width: 20%;">
+            <div style="padding-top:10px;text-align: center;">
+                <div>
+                    <i class="pi pi-prime" style="font-size: 2rem"></i>
+                </div>
+                <div style="font-weight: bold;">
+                    <span>PRIME</span>
+                </div>
+            </div>
+            <div class="grid sidenav-content">
+                <div class="col-8">
+                    <span>Dashboard</span>
+                </div>
+                <div class="col-4">
+                    <i class="pi pi-home"></i>
+                </div>
+
             
+                <div class="col-8">
+                    <span>Calender</span>
+                </div>
+                <div class="col-4">
+                    <i class="pi pi-calendar"></i>
+                </div>
+           
+                <div class="col-8">
+                    <span>Employee Search</span>
+                </div>
+                <div class="col-4">
+                    <i class="pi pi-search"></i>
+                </div>
+            
+                <div class="col-8">
+                    <span>Time Sheets</span>
+                </div>
+                <div class="col-4">
+                    <i class="pi pi-clock"></i>
+                </div>
+            </div>
+
+
+            <!-- <section > -->
+
+            <!-- </section> -->
+        </mat-sidenav>
+        <mat-sidenav-content>
             <app-header (valueChange)="showHide($event)"></app-header>
-            <app-social></app-social>
             <div style="margin: 10px;">
-                <app-profile-side-card1 (valueChange)="showHide($event)" [hidden]="viewDetails"></app-profile-side-card1>
+                <app-profile-side-card1 (valueChange)="showHide($event)"
+                    [hidden]="viewDetails"></app-profile-side-card1>
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>

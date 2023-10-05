@@ -8,3 +8,9 @@
     margin-top: -40px;
 }
 
+:host ::ng-deep .p-chip {
+    border-radius: 0px;
+    font-size: small;
+    background-color:#1d65a5 ;
+    color: #fff;
+}

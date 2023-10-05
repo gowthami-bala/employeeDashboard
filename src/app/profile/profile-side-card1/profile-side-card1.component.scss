@@ -4,24 +4,27 @@ label{
 }
 .desc{
   margin-bottom: 10px;
+  
 }
 
-.parent [tabindex] {
+.parent {
   transition:999s;
   background: rgba(255,255,255,0);
 }
-.parent:focus-within [tabindex] {
+.parent:focus-within  {
   transition:0s;
   background: rgba(255,255,254,0); /* a little different coloration to make sure we trigger the transition */
 }
-.parent [tabindex]:focus,
-.parent [tabindex].active:focus{ 
+.parent :focus,
+.parent .active:focus{ 
   background-color:  #00aae7;
   color: #fff;
-  // transition:0s;
+  transition:0s;
 }
 
-.parent .active{ 
-  background-color:  #00aae7; /* a little different coloration to make sure we trigger the transition */
-  color: #fff;
-}
+// .parent .active{ 
+//   background-color:  #00aae7; /* a little different coloration to make sure we trigger the transition */
+//   color: #fff;
+// }
+
+

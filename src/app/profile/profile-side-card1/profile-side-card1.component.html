@@ -1,84 +1,96 @@
 <div>
     <div class="grid">
-        <div class="col-4">
+        <div class="col-3">
             <p-card>
-                <div class="parent" tabindex="0">
-                    <div class="one" tabindex="1">
-                        <div class="grid desc" (click)="profileNav()" >
-                            <div class="col-2" style="text-align: center;" >
-                                <i class="pi pi-user"></i>
-                            </div>
-                            <div class="col-10"  >
-                                <label >Personal</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="two" tabindex="2">
-                        <div class="grid desc" (click)="profileNav()">
-                            <div class="col-2" style="text-align: center;">
-                                <i class="pi pi-briefcase"></i>
-                            </div>
-                            <div class="col-10" >
-                                <label>Work</label>
+                <div *ngFor ="let details of data,let i=index">
+                    <div class="parent" tabindex="0" >
+                        <div  tabindex="{{i+1}}" >
+                            <div class="grid desc" (click)="profileNav(i+1)" >
+                                <div class="col-2" style="text-align: center;" >
+                                    <i class="{{details.icon}}"></i>
+                                </div>
+                                <div class="col-10"  >
+                                    <label >{{details.name}}</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="three" tabindex="3">
-                        <div class="grid desc" (click)="profileNav()">
-                            <div class="col-2" style="text-align: center;">
-                                <i class="pi pi-id-card"></i>
+                        
+                        <!-- <div class="two" tabindex="2">
+                            <div class="grid desc" (click)="profileNav()">
+                                <div class="col-2" style="text-align: center;">
+                                    <i class="pi pi-briefcase"></i>
+                                </div>
+                                <div class="col-10" >
+                                    <label>Work</label>
+                                </div>
                             </div>
-                            <div class="col-10">
-                                <label>Identity</label>
+                        </div> -->
+                        <!-- <div class="three" tabindex="3">
+                            <div class="grid desc" (click)="profileNav()">
+                                <div class="col-2" style="text-align: center;">
+                                    <i class="pi pi-id-card"></i>
+                                </div>
+                                <div class="col-10">
+                                    <label>Identity</label>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="four" tabindex="4">
-                        <div class="grid desc" (click)="profileNav()">
-                            <div class="col-2" style="text-align: center;">
-                                <i class="pi pi-phone"></i>
+                        </div> -->
+                        <!-- <div class="four" tabindex="4">
+                            <div class="grid desc" (click)="profileNav()">
+                                <div class="col-2" style="text-align: center;">
+                                    <i class="pi pi-phone"></i>
+                                </div>
+                                <div class="col-10">
+                                    <label>Contact</label>
+                                </div>
                             </div>
-                            <div class="col-10">
-                                <label>Contact</label>
+                        </div> -->
+                        <!-- <div class="five" tabindex="5">
+                            <div class="grid desc" (click)="profileNav()">
+                                <div class="col-2" style="text-align: center;">
+                                    <i class="pi pi-book"></i>
+                                </div>
+                                <div class="col-10">
+                                    <label>Education</label>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="five" tabindex="5">
-                        <div class="grid desc" (click)="profileNav()">
-                            <div class="col-2" style="text-align: center;">
-                                <i class="pi pi-book"></i>
+                        </div> -->
+                        <!-- <div class="five" tabindex="5">
+                            <div class="grid desc" (click)="profileNav()">
+                                <div class="col-2" style="text-align: center;">
+                                    <i class="pi pi-circle-fill"></i>
+                                </div>
+                                <div class="col-10">
+                                    <label>Skills</label>
+                                </div>
                             </div>
-                            <div class="col-10">
-                                <label>Education</label>
+                        </div> -->
+                        <!-- <div class="five" tabindex="5">
+                            <div class="grid desc" (click)="profileNav()">
+                                <div class="col-2" style="text-align: center;">
+                                    <i class="pi pi-globe"></i>
+                                </div>
+                                <div class="col-10">
+                                    <label>Social</label>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="five" tabindex="5">
-                        <div class="grid desc" (click)="profileNav()">
-                            <div class="col-2" style="text-align: center;">
-                                <i class="pi pi-circle-fill"></i>
-                            </div>
-                            <div class="col-10">
-                                <label>Skills</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="five" tabindex="5">
-                        <div class="grid desc" (click)="profileNav()">
-                            <div class="col-2" style="text-align: center;">
-                                <i class="pi pi-globe"></i>
-                            </div>
-                            <div class="col-10">
-                                <label>Social</label>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
+               
             </p-card>
         </div>
-        <div class="col-8">
-            <app-personal [hidden]="viewBasicProfile" (editPersonal)="profileEdit($event)" ></app-personal><br>
-            <app-profile [hidden]="editProfile"></app-profile>
+        <div class="col-9">
+            <div *ngIf="tab === 1">
+                <app-personal  (editPersonal)="profileEdit($event)" ></app-personal><br>
+                <app-profile  [hidden]="editProfile"></app-profile>
+            </div>
+            <app-work *ngIf="tab === 2"></app-work>
+            <app-contact *ngIf="tab === 3"></app-contact>
+            <app-skills *ngIf="tab === 4"> </app-skills>
+            <app-identity *ngIf="tab === 5"></app-identity>
+            <app-social *ngIf="tab === 6"></app-social>
+
         </div>
     </div>
 </div>

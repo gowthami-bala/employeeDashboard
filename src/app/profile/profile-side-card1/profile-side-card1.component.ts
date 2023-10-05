@@ -9,37 +9,26 @@ export class ProfileSideCard1Component implements OnInit {
   data: any;
   viewBasicProfile :boolean = true;
   editProfile :boolean = true; 
+  tab: any;
   constructor() { }
 
   ngOnInit(): void {
 
     this.data = [
-      { id: "1", image: "../../assets/connection.jpg" },
-      { id: "2", image: "../../assets/connection.jpg" },
-      { id: "3", image: "../../assets/connection.jpg" },
-      { id: "4", image: "../../assets/connection.jpg" },
-      { id: "5", image: "../../assets/connection.jpg" },
-      { id: "6", image: "../../assets/connection.jpg" },
-      { id: "7", image: "../../assets/connection.jpg" },
-      { id: "8", image: "../../assets/connection.jpg" },
-      { id: "9", image: "../../assets/connection.jpg" },
-      { id: "10", image: "../../assets/connection.jpg" },
-      { id: "11", image: "../../assets/connection.jpg" },
-      { id: "12", image: "../../assets/connection.jpg" },
-      { id: "13", image: "../../assets/connection.jpg" },
-      { id: "14", image: "../../assets/connection.jpg" },
-      { id: "15", image: "../../assets/connection.jpg" },
+      { name: "Personal",icon: "pi pi-user"},
+      { name: "Work",icon: "pi pi-briefcase"},
+      { name: "Contact",icon: "pi pi-phone"},
+      { name: "Skills" ,icon: "pi pi-circle-fill"},
+      { name: "Identity",icon: "pi pi-id-card" },
+      { name: "Social",icon: "pi pi-globe" },
+
     ]
   }
-  profileNav(){
-    this.viewBasicProfile = false
-    
+  profileNav(data:any){
+    this.tab = data;
   }
 
   profileEdit(data:any){
-    console.log("hi");
-    
-    console.log(data);
     if(data === "edit"){
       this.editProfile = false
     }

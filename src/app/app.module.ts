@@ -33,8 +33,13 @@ import {DividerModule} from 'primeng/divider';
 import { PersonalComponent } from './profile/personal/personal.component';
 import { WorkComponent } from './profile/work/work.component';
 import { SocialComponent } from './profile/social/social.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { SkillsComponent } from './profile/skills/skills.component';
+import { ContactComponent } from './profile/contact/contact.component';
+import { IdentityComponent } from './profile/identity/identity.component';
+import { ChipModule } from 'primeng/chip';
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, HeaderComponent, ProfileComponent, ProfileSideCard1Component, SidenavComponent, SampleComponent, RoughComponent, PersonalComponent, WorkComponent, SocialComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, HeaderComponent, ProfileComponent, ProfileSideCard1Component, SidenavComponent, SampleComponent, RoughComponent, PersonalComponent, WorkComponent, SocialComponent, SkillsComponent, ContactComponent, IdentityComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -57,7 +62,9 @@ import { SocialComponent } from './profile/social/social.component';
     SidebarModule,
     MatMenuModule,
     ImageModule,
-    DividerModule
+    DividerModule,
+    MatTabsModule,
+    ChipModule
   ],
   providers: [],
   bootstrap: [AppComponent],
